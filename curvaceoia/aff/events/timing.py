@@ -1,0 +1,47 @@
+from math import isclose
+from typing import ClassVar, Self
+
+from pydantic import NonNegativeInt as uint
+
+from curvaceoia.aff.models.base import AFFEventConfig, TechnicalEvent
+from curvaceoia.aff.utils.dffloat import dffloat2
+
+
+__all__ = ['Timing']
+
+class Timing(TechnicalEvent):
+	
+	__aff_config__: ClassVar[AFFEventConfig] = AFFEventConfig(
+		is_event=True,
+		commands=('timing', ),
+		argument_order=('time', 'bpm', 'beat')
+	)
+
+	time: uint
+	bpm: dffloat2
+	beat: dffloat2
+
+	def after_validation(self) -> Self:
+		super().after_validation()
+		
+		if self.beat < 0:
+			raise ValueError(f'beat must be non-negative')
+		
+		if not isclose(self.bpm, 0, abs_tol=1e-2) and isclose(self.beat, 0, abs_tol=1e-2):
+			raise ValueError(f'beat cannot be zero if bpm is non-zero')
+		
+		if self.time == 0:
+			if self.bpm < 0:
+				raise ValueError(f'bpm of initial timing (time == 0) must be non-negative')
+			if self.beat < 0:
+				raise ValueError(f'beat of initial timing (time == 0) must be non-negative')
+		
+		return self
+	
+	@property
+	def beat_duration_ms(self) -> float:
+		return 6e4 / self.bpm
+	
+	@property
+	def measure_duration_ms(self) -> float:
+		return self.beat_duration_ms * self.beat

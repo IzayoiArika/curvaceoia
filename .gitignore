@@ -1,0 +1,9 @@
+.venv
+*.aff
+*.json
+create_init_config.json
+create_init.py
+clean_pycache.py
+test.py
+*.bak
+__pycache__

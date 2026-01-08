@@ -1,0 +1,14 @@
+include README.md LICENSE
+recursive-include belikethis *.py
+
+prune .venv
+prune */__pycache__
+prune .git
+exclude *.pyc
+
+exclude clean_pycache.py
+exclude test.py
+exclude create_init.py
+exclude create_init_config.json
+exclude .gitignore
+exclude *.bak
