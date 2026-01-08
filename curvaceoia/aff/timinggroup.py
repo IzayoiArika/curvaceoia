@@ -12,7 +12,7 @@ from curvaceoia.aff.events.timing import Timing
 from curvaceoia.aff.models.base import AFFEvent
 from curvaceoia.aff.lexer.analyse import analyse_command, analyse_timinggroup_footer, analyse_timinggroup_header
 from curvaceoia.aff.lexer.token import tokenize
-from curvaceoia.utils.cfg import get_default_model_cfg, uses_scaled_arctap
+from curvaceoia.utils.cfg import GlobalConfig, get_default_model_cfg
 
 
 __all__ = ['parse_event', 'TimingGroup']
@@ -23,7 +23,7 @@ def get_registered_aff_events():
 	global __registered_aff_events__
 	if not __registered_aff_events__:
 		__registered_aff_events__ = [Timing, Arc, Tap, TapFloat, Hold, HoldFloat, SceneControl, Camera]
-		if uses_scaled_arctap():
+		if GlobalConfig.uses_scaled_arctap():
 			__registered_aff_events__.insert(1, ScaledArctap)
 	
 	return __registered_aff_events__

@@ -2,7 +2,6 @@
 
 from .aff import AFF, ArcType, ArcColor, Arctap, Arc, ScaledArctap, CameraEasing, Camera, Hold, HoldFloat, SceneControlType, SceneControl, Tap, TapFloat, Timing, analyse_annotation, analyse_part_separation, analyse_timinggroup_header, analyse_timinggroup_footer, analyse_command, TokenType, Token, Tokens, ARG_TOKEN_TYPES, COMMAND_TOKEN_TYPES, TOKEN_TYPES_PATTERNS, tokenize, AFFEventConfig, AFFEvent, GameObjectEvent, TechnicalEvent, FloorEvent, SkyEvent, LongNoteEvent, TapLikeEvent, parse_event, TimingGroup, FixedLane, FloatLane, ArcCoord, Coordinate, dffloat, dffloat2, dffloat3, BaseEasing, EasingLinear, EasingSineIn, EasingSineOut, EasingBezierDefault, EasingSineInOut, ArcEasing, get_easing_x, get_easing_y
 from .songlist import GuardinaError, I18nAny, I18nStr, I18nStrs, I18nStrEnRequired, I18nBool, LowerId, AdvancedModel, BaseSong, DeletedSong, Song, SongDifficulty, AdditionalFile, BgDayNight, SongList
-from .utils import enable_scaled_arctap, uses_scaled_arctap, accept_langcode_kr, accepts_langcode_kr, classproperty
 
 __all__ = [
     'AFF', 
@@ -73,11 +72,6 @@ __all__ = [
     'AdditionalFile', 
     'BgDayNight', 
     'SongList', 
-    'enable_scaled_arctap', 
-    'uses_scaled_arctap', 
-    'accept_langcode_kr', 
-    'accepts_langcode_kr', 
-    'classproperty', 
 ]
 
 # AUTOGEN-END :: MANUALLY EDIT PROHIBITED

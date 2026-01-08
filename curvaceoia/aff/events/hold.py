@@ -37,7 +37,8 @@ class Hold(FloorEvent, LongNoteEvent):
 
 
 class HoldFloat(Hold):
-	lane: FloatLane # type: ignore
+
+	lane: FloatLane
 
 	def to_float_lane(self) -> HoldFloat:
 		return self
@@ -50,4 +51,4 @@ class HoldFloat(Hold):
 		)
 	
 	def mirror(self) -> None:
-		self.lame = Coordinate.mirror_float(self.lane)
+		self.lane = Coordinate.mirror_float(self.lane) # type: ignore

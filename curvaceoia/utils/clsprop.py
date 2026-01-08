@@ -2,8 +2,7 @@ from collections.abc import Callable
 from typing import Any, Generic, TypeVar
 
 
-__all__ = ['classproperty']
-
+__all__ = []
 
 MT = TypeVar('MT', bound=Any)
 RT = TypeVar('RT')

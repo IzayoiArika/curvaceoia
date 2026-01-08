@@ -34,7 +34,8 @@ class Tap(FloorEvent, TapLikeEvent):
 
 
 class TapFloat(Tap):
-	lane: FloatLane # type: ignore
+
+	lane: FloatLane
 
 	def to_float_lane(self) -> TapFloat:
 		return self
@@ -46,4 +47,4 @@ class TapFloat(Tap):
 		)
 	
 	def mirror(self) -> None:
-		self.lame = Coordinate.mirror_float(self.lane)
+		self.lane = Coordinate.mirror_float(self.lane) # type: ignore

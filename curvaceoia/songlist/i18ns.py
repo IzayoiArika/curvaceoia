@@ -1,7 +1,7 @@
 from typing import Any, ClassVar, Generic, TypeVar
 
 from curvaceoia.songlist.model import AdvancedModel
-from curvaceoia.utils.cfg import accepts_langcode_kr
+from curvaceoia.utils.cfg import GlobalConfig
 
 
 __all__ = [
@@ -49,7 +49,7 @@ class I18nAny(AdvancedModel, Generic[T]):
 		if not isinstance(data, dict):
 			return data
 		
-		if 'kr' in data and not accepts_langcode_kr():
+		if 'kr' in data and not GlobalConfig.accepts_langcode_kr():
 			raise GuardinaError
 		
 		return data
