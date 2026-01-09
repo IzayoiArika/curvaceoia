@@ -4,7 +4,7 @@ from pydantic import ConfigDict
 from curvaceoia.utils.clsprop import classproperty
 
 
-__all__ = []
+__all__ = ['GlobalConfig', 'get_default_model_cfg']
 
 class GlobalConfig:
 	_scaled_arctap: bool = False

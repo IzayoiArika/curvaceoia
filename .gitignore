@@ -7,3 +7,4 @@ clean_pycache.py
 test.py
 *.bak
 __pycache__
+dist/
