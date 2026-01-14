@@ -5,11 +5,11 @@ from typing import Any, ClassVar, Self
 
 from pydantic import NonNegativeInt as uint, PrivateAttr
 
-from curvaceoia.aff.models.base import AFFEventConfig
-from curvaceoia.aff.models.derived import LongNoteEvent, SkyEvent, TapLikeEvent
-from curvaceoia.aff.utils.coord import ArcCoord, Coordinate
-from curvaceoia.aff.utils.easings import ArcEasing, BaseEasing, get_easing_x, get_easing_y
-from curvaceoia.aff.utils.dffloat import dffloat2
+from curvaceoia1.aff.models.base import AFFEventConfig
+from curvaceoia1.aff.models.derived import LongNoteEvent, SkyEvent, TapLikeEvent
+from curvaceoia1.aff.utils.coord import ArcCoord, Coordinate
+from curvaceoia1.aff.utils.easings import ArcEasing, BaseEasing, get_easing_x, get_easing_y
+from curvaceoia1.aff.utils.dffloat import dffloat2
 
 
 __all__ = ['ArcType', 'ArcColor', 'Arctap', 'Arc', 'ScaledArctap']

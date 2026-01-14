@@ -4,10 +4,10 @@ from pydantic import BaseModel, ValidationError, model_validator
 from pydantic.fields import FieldInfo
 from pydantic_core.core_schema import CoreSchema, union_schema, no_info_plain_validator_function
 
-from curvaceoia.aff.lexer.analyse import analyse_command
-from curvaceoia.aff.lexer.token import tokenize
-from curvaceoia.utils.cfg import get_default_model_cfg
-from curvaceoia.utils.clsprop import classproperty
+from curvaceoia1.aff.lexer.analyse import analyse_command
+from curvaceoia1.aff.lexer.token import tokenize
+from curvaceoia1.utils.cfg import get_default_model_cfg
+from curvaceoia1.utils.clsprop import classproperty
 
 __all__ = ['AFFEventConfig', 'AFFEvent', 'GameObjectEvent', 'TechnicalEvent']
 

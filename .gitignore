@@ -1,10 +1,15 @@
 .venv
+.gitignore
 *.aff
 *.json
+*.bak
+*.pyc
 create_init_config.json
 create_init.py
 clean_pycache.py
 test.py
-*.bak
 __pycache__
+*.egg-info/
 dist/
+build/
+devtest/

@@ -1,6 +1,6 @@
 from typing import Self
 
-from curvaceoia.aff.models.base import GameObjectEvent
+from curvaceoia1.aff.models.base import GameObjectEvent
 
 
 __all__ = ['FloorEvent', 'SkyEvent', 'LongNoteEvent', 'TapLikeEvent']

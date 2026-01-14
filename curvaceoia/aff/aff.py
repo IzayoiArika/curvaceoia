@@ -4,10 +4,10 @@ from typing import Any, Literal, Self
 
 from pydantic import BaseModel, model_validator
 
-from curvaceoia.aff.lexer.analyse import analyse_annotation, analyse_command, analyse_part_separation, analyse_timinggroup_footer, analyse_timinggroup_header
-from curvaceoia.aff.lexer.token import tokenize
-from curvaceoia.aff.timinggroup import TimingGroup, parse_event
-from curvaceoia.utils.cfg import get_default_model_cfg
+from curvaceoia1.aff.lexer.analyse import analyse_annotation, analyse_command, analyse_part_separation, analyse_timinggroup_footer, analyse_timinggroup_header
+from curvaceoia1.aff.lexer.token import tokenize
+from curvaceoia1.aff.timinggroup import TimingGroup, parse_event
+from curvaceoia1.utils.cfg import get_default_model_cfg
 
 
 __all__ = ['AFF']

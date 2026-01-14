@@ -1,7 +1,7 @@
 from collections.abc import Iterable
 from typing import Any, Literal
 
-from curvaceoia.aff.lexer.token import ARG_TOKEN_TYPES, COMMAND_TOKEN_TYPES, Token, Tokens, TokenType
+from curvaceoia1.aff.lexer.token import ARG_TOKEN_TYPES, COMMAND_TOKEN_TYPES, Token, Tokens, TokenType
 
 
 __all__ = [

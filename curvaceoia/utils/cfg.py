@@ -1,7 +1,7 @@
-from typing import Any
+from typing import Any, Literal
 from pydantic import ConfigDict
 
-from curvaceoia.utils.clsprop import classproperty
+from curvaceoia1.utils.clsprop import classproperty
 
 
 __all__ = ['GlobalConfig', 'get_default_model_cfg']
@@ -17,22 +17,18 @@ class GlobalConfig:
 	@classmethod
 	def uses_scaled_arctap(cls) -> bool:
 		return cls._scaled_arctap
-	
-	@classmethod
-	def enable_langcode_kr(cls) -> None:
-		cls._kr = True
-	
-	@classmethod
-	def accepts_langcode_kr(cls) -> bool:
-		return cls._kr
 
 
-def get_default_model_cfg(ignored_types: Any = None) -> ConfigDict:
+def get_default_model_cfg(
+	extra: Literal['allow', 'ignore', 'forbid'] = 'forbid',
+	ignored_types: Any = None
+) -> ConfigDict:
+	
 	if ignored_types is None:
 		ignored_types = ()
 
 	return ConfigDict(
-		extra='forbid',
+		extra=extra,
 		validate_assignment=True,
 		validate_default=True,
 		ignored_types=ignored_types + (classproperty, ),

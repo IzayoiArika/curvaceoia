@@ -1,6 +1,6 @@
 from enum import IntEnum
 
-from curvaceoia.aff.utils.dffloat import dffloat2, dffloat3
+from curvaceoia1.aff.utils.dffloat import dffloat2, dffloat3
 
 
 __all__ = ['FixedLane', 'FloatLane', 'ArcCoord', 'Coordinate']

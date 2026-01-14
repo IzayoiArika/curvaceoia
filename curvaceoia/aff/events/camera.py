@@ -3,8 +3,8 @@ from typing import ClassVar
 
 from pydantic import NonNegativeInt as uint
 
-from curvaceoia.aff.models.base import AFFEventConfig, TechnicalEvent
-from curvaceoia.aff.utils.dffloat import dffloat2
+from curvaceoia1.aff.models.base import AFFEventConfig, TechnicalEvent
+from curvaceoia1.aff.utils.dffloat import dffloat2
 
 
 __all__ = ['CameraEasing', 'Camera']

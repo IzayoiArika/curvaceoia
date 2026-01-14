@@ -3,9 +3,9 @@ from typing import ClassVar
 
 from pydantic import NonNegativeInt as uint
 
-from curvaceoia.aff.models.derived import FloorEvent, TapLikeEvent
-from curvaceoia.aff.models.base import AFFEventConfig
-from curvaceoia.aff.utils.coord import Coordinate, FixedLane, FloatLane
+from curvaceoia1.aff.models.derived import FloorEvent, TapLikeEvent
+from curvaceoia1.aff.models.base import AFFEventConfig
+from curvaceoia1.aff.utils.coord import Coordinate, FixedLane, FloatLane
 
 
 __all__ = ['Tap', 'TapFloat']

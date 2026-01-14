@@ -4,7 +4,7 @@ from typing import Any, Self, final
 
 from pydantic_core.core_schema import CoreSchema, float_schema, no_info_plain_validator_function, plain_serializer_function_ser_schema
 
-from curvaceoia.utils.clsprop import classproperty
+from curvaceoia1.utils.clsprop import classproperty
 
 
 __all__ = ['dffloat', 'dffloat2', 'dffloat3']

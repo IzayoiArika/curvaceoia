@@ -3,16 +3,16 @@ from typing import Any, Self
 
 from pydantic import BaseModel, NonNegativeInt as uint, PrivateAttr, ValidationError, model_validator
 
-from curvaceoia.aff.events.arc import Arc, ScaledArctap
-from curvaceoia.aff.events.camera import Camera
-from curvaceoia.aff.events.hold import Hold, HoldFloat
-from curvaceoia.aff.events.scenecontrol import SceneControl
-from curvaceoia.aff.events.tap import Tap, TapFloat
-from curvaceoia.aff.events.timing import Timing
-from curvaceoia.aff.models.base import AFFEvent
-from curvaceoia.aff.lexer.analyse import analyse_command, analyse_timinggroup_footer, analyse_timinggroup_header
-from curvaceoia.aff.lexer.token import tokenize
-from curvaceoia.utils.cfg import GlobalConfig, get_default_model_cfg
+from curvaceoia1.aff.events.arc import Arc, ScaledArctap
+from curvaceoia1.aff.events.camera import Camera
+from curvaceoia1.aff.events.hold import Hold, HoldFloat
+from curvaceoia1.aff.events.scenecontrol import SceneControl
+from curvaceoia1.aff.events.tap import Tap, TapFloat
+from curvaceoia1.aff.events.timing import Timing
+from curvaceoia1.aff.models.base import AFFEvent
+from curvaceoia1.aff.lexer.analyse import analyse_command, analyse_timinggroup_footer, analyse_timinggroup_header
+from curvaceoia1.aff.lexer.token import tokenize
+from curvaceoia1.utils.cfg import GlobalConfig, get_default_model_cfg
 
 
 __all__ = ['parse_event', 'TimingGroup']
